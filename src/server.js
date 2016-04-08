@@ -20,6 +20,8 @@ module.exports = (config) => {
   return new Promise((resolve, reject) => {
     server.register(require('./plugins')(config.db), (err) => {
       if (err) return reject(err);
+      const auth = require('./config/auth');
+      server.auth.strategy(auth.name, auth.scheme, auth.mode, auth.options);
       server.start(err => {
         if (err) return reject(err);
         console.log('Server running at:', server.info.uri);
