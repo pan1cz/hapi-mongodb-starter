@@ -3,7 +3,7 @@
 const Good = require('good');
 const GoodConsole = require('good-console');
 const AuthCookie = require('hapi-auth-cookie');
-const login = require('./entities/authentication/index');
+const authentication = require('./entities/authentication/index');
 const users = require('./entities/users/index');
 const blogs = require('./entities/blogs/index');
 
@@ -32,7 +32,7 @@ module.exports = (db) => {
 
   // Login Entity Plugin
   plugins.push({
-    register: login,
+    register: authentication,
     options: {
       db: db
     }
