@@ -8,7 +8,6 @@ module.exports = (server, users) => {
       .then((user) => {
           if (user) {
             request.cookieAuth.set(user);
-            // return reply.redirect('/batmanshideout');
             return reply('Login successful');
           } else {
             return reply('Wrong username or password');

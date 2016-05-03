@@ -3,7 +3,7 @@ module.exports = {
   scheme: 'cookie',
   mode: 'required',
   options: {
-    password: 'Set a password', // cookie secret
+    password: '3c28a5a4-86e7-4d6d-bc0d-fd03dd265073', // cookie secret
     cookie: 'session', // Cookie name
     redirectTo: false,
     isSecure: false, // required for non-https applications
